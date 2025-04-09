@@ -1,11 +1,10 @@
 package com.example.task1;
 
-import java.util.ArrayList;
 import java.util.logging.Logger;
 
 public class MyBigNumber {
     private static final Logger logger = Logger.getLogger(MyBigNumber.class.getName());
-    public void sum(String stn1, String stn2){
+    public static String sum(String stn1, String stn2){
         char[] number1 = reverseCharArray(stn1.toCharArray());
         char[] number2 = reverseCharArray(stn2.toCharArray());
 
@@ -22,8 +21,9 @@ public class MyBigNumber {
 
             isCarry = sum >= 10;
             logger.info("kết quả sau lần " + (i + 1) + ":" + result);
-
         }
+
+        return result;
     }
 
     private static char[] reverseCharArray(char[] arr) {
