@@ -1,13 +1,17 @@
 package com.example.task1;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
 class Task1ModuleApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void testSumPositiveNumbers() {
+		assertEquals("777", MyBigNumber.sum("345", "432"));
 	}
 
+	@Test
+	public void testSumWithZero() {
+		assertEquals("453", MyBigNumber.sum("453", "0"));
+	}
 }
